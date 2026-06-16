@@ -1,0 +1,5 @@
+.DS_Store
+*.backup-*
+signatures/
+RINGCENTRAL-COMPLIANCE-UPDATE.md
+claritiv-business-overview.pdf

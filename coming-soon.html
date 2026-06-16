@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon — Claritiv Health | Ketamine Infusion Therapy in Jackson, TN</title>
+<meta name="description" content="Claritiv Health is bringing premium ketamine infusion therapy to North Jackson, TN. Sign up to be the first to know when we open.">
+<meta property="og:title" content="Claritiv Health — Coming Soon">
+<meta property="og:description" content="Premium ketamine infusion therapy coming to Jackson, TN. Be the first to know.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C5A86B;
+  --navy:#132B4C;
+  --navy-dark:#0B2143;
+  --cream:#FDF7F4;
+  --white:#FFFFFF;
+  --font-heading:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--navy-dark);
+  color:var(--cream);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow-x:hidden;
+  padding:24px;
+}
+
+.container{
+  max-width:640px;
+  width:100%;
+  text-align:center;
+}
+
+/* Logo */
+.logo{
+  width:120px;
+  height:auto;
+  margin:0 auto 32px;
+  opacity:0.95;
+}
+
+/* Gold line */
+.divider{
+  width:80px;
+  height:2px;
+  background:var(--gold);
+  margin:0 auto 32px;
+}
+
+/* Heading */
+h1{
+  font-family:var(--font-heading);
+  font-weight:400;
+  font-size:clamp(2rem, 5vw, 3.2rem);
+  color:var(--gold);
+  line-height:1.2;
+  margin-bottom:20px;
+  letter-spacing:0.02em;
+}
+
+/* Subheading */
+.subtitle{
+  font-family:var(--font-heading);
+  font-size:clamp(1.1rem, 2.5vw, 1.4rem);
+  color:var(--cream);
+  font-weight:300;
+  font-style:italic;
+  margin-bottom:32px;
+  opacity:0.9;
+}
+
+/* Body copy */
+.body-text{
+  font-size:1rem;
+  line-height:1.7;
+  color:rgba(253,247,244,0.8);
+  margin-bottom:40px;
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Form */
+.signup-form{
+  display:flex;
+  gap:12px;
+  max-width:480px;
+  margin:0 auto 24px;
+}
+
+.signup-form input[type="email"]{
+  flex:1;
+  padding:14px 18px;
+  border:1px solid rgba(197,168,107,0.3);
+  border-radius:6px;
+  background:rgba(255,255,255,0.05);
+  color:var(--cream);
+  font-family:var(--font-body);
+  font-size:1rem;
+  outline:none;
+  transition:border-color 0.3s;
+}
+
+.signup-form input[type="email"]::placeholder{
+  color:rgba(253,247,244,0.4);
+}
+
+.signup-form input[type="email"]:focus{
+  border-color:var(--gold);
+}
+
+.signup-form button{
+  padding:14px 28px;
+  background:var(--gold);
+  color:var(--navy-dark);
+  border:none;
+  border-radius:6px;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:0.95rem;
+  cursor:pointer;
+  transition:all 0.3s;
+  white-space:nowrap;
+}
+
+.signup-form button:hover{
+  background:#d4b96f;
+  transform:translateY(-1px);
+}
+
+/* Success message */
+.success-msg{
+  display:none;
+  color:var(--gold);
+  font-size:1rem;
+  margin-bottom:24px;
+  font-weight:500;
+}
+
+.success-msg.show{
+  display:block;
+}
+
+/* Privacy note */
+.privacy{
+  font-size:0.8rem;
+  color:rgba(253,247,244,0.4);
+  margin-bottom:48px;
+}
+
+/* Divider 2 */
+.divider2{
+  width:60px;
+  height:1px;
+  background:rgba(197,168,107,0.3);
+  margin:0 auto 28px;
+}
+
+/* Tagline */
+.tagline{
+  font-family:var(--font-heading);
+  font-size:1.1rem;
+  color:var(--gold);
+  font-weight:500;
+  margin-bottom:16px;
+  letter-spacing:0.05em;
+}
+
+/* Contact info */
+.contact{
+  font-size:0.9rem;
+  color:rgba(253,247,244,0.5);
+  line-height:1.8;
+}
+
+.contact a{
+  color:var(--gold);
+  text-decoration:none;
+  transition:opacity 0.3s;
+}
+
+.contact a:hover{
+  opacity:0.8;
+}
+
+/* Social links */
+.socials{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  margin-top:24px;
+}
+
+.socials a{
+  color:rgba(253,247,244,0.4);
+  font-size:0.85rem;
+  text-decoration:none;
+  transition:color 0.3s;
+}
+
+.socials a:hover{
+  color:var(--gold);
+}
+
+/* Responsive */
+@media(max-width:520px){
+  .signup-form{
+    flex-direction:column;
+  }
+  .signup-form button{
+    width:100%;
+  }
+}
+
+/* Subtle background effect */
+body::before{
+  content:'';
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 50% 0%, rgba(197,168,107,0.06) 0%, transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.container{
+  position:relative;
+  z-index:1;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <img src="assets/logos/gold-icon-transparent.png" alt="Claritiv Health" class="logo">
+  
+  <div class="divider"></div>
+  
+  <h1>Something New Is Coming</h1>
+  
+  <p class="subtitle">Clear Mind. New Beginning.</p>
+  
+  <p class="body-text">
+    Claritiv Health is bringing ketamine infusion therapy to Jackson, Tennessee — 
+    a new approach to treating depression, anxiety, and PTSD for those who haven't 
+    found relief through traditional treatments.
+  </p>
+  
+  <p class="body-text" style="margin-bottom:32px;">
+    Be the first to know when we open. Sign up below and we'll keep you updated.
+  </p>
+  
+  <!-- Hidden form for Netlify detection -->
+  <form name="patient-interest" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="email" type="email">
+  </form>
+  
+  <!-- Visible form -->
+  <form class="signup-form" id="signupForm">
+    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+    <button type="submit">Notify Me</button>
+  </form>
+  
+  <p class="success-msg" id="successMsg">
+    ✓ You're on the list! We'll be in touch soon.
+  </p>
+  
+  <p class="privacy">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
+  
+  <div class="divider2"></div>
+  
+  <p class="tagline">Clear Mind. New Beginning.</p>
+  
+  <div class="contact">
+    <p><a href="tel:7312565333">(731) 256-5333</a></p>
+    <p><a href="mailto:info@claritivhealth.com">info@claritivhealth.com</a></p>
+    <p><a href="https://claritivhealth.com">claritivhealth.com</a></p>
+  </div>
+  
+  <div class="socials">
+    <a href="https://instagram.com/claritivhealth" target="_blank">Instagram</a>
+    <a href="https://facebook.com/claritivhealth" target="_blank">Facebook</a>
+    <a href="https://twitter.com/claritivhealth" target="_blank">Twitter</a>
+    <a href="https://linkedin.com/company/claritiv-health" target="_blank">LinkedIn</a>
+  </div>
+  
+</div>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const form = document.getElementById('signupForm');
+  const success = document.getElementById('successMsg');
+  const email = document.getElementById('emailInput').value;
+  
+  // Submit to Netlify Forms
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'form-name=patient-interest&email=' + encodeURIComponent(email)
+  }).then(response => {
+    form.style.display = 'none';
+    success.classList.add('show');
+  }).catch(() => {
+    form.style.display = 'none';
+    success.classList.add('show');
+  });
+});
+</script>
+
+</body>
+</html>

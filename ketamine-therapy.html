@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ketamine Therapy | Claritiv Health</title>
+    <meta name="description" content="Evidence-based ketamine infusion therapy for treatment-resistant depression and trauma. Expert patient selection ensures high success rates.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #C5A86B;
+            --navy: #132B4C;
+            --cream: #FDF7F4;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--navy);
+            line-height: 1.6;
+            background: var(--cream);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            white-space: nowrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .header-phone {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+            color: var(--white);
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        
+        .btn-primary:hover {
+            background: #D4B87A;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* What Is Section */
+        .what-is {
+            background: var(--white);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .two-col h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .two-col p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-box {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Approach Section - NEW */
+        .approach {
+            background: var(--cream);
+        }
+        
+        .approach-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 2.5rem;
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 0.5rem;
+        }
+        
+        .approach-intro h3 {
+            font-size: 1.75rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .approach-intro p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        /* Conditions */
+        .conditions {
+            background: var(--white);
+        }
+        
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .condition-card {
+            background: var(--cream);
+            padding: 2.5rem 2rem;
+            border-radius: 0.5rem;
+            border-top: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .condition-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .condition-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .condition-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+        
+        .condition-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .condition-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .condition-card li {
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .condition-card li:before {
+            content: "•";
+            color: var(--gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* What to Expect */
+        .expect {
+            background: var(--navy);
+            color: var(--white);
+        }
+        
+        .expect .section-title,
+        .expect .section-label {
+            color: var(--white);
+        }
+        
+        .expect .section-description {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .timeline {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .timeline-step {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .timeline-step h3 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-step p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+        
+        /* Treatment Protocols */
+        .protocols {
+            background: var(--cream);
+        }
+        
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .protocol-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            border-radius: 0.5rem;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .protocol-card h3 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .protocol-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 1rem;
+        }
+        
+        .protocol-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .protocol-card li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(19,43,76,0.1);
+            color: var(--gray);
+        }
+        
+        .protocol-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .protocol-card li:before {
+            content: "✓";
+            color: var(--gold);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+        
+        /* Safety */
+        .safety {
+            background: var(--white);
+        }
+        
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .safety-item {
+            display: flex;
+            gap: 1.5rem;
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        .safety-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .safety-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+        
+        .safety-item p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* Research */
+        .research {
+            background: var(--cream);
+        }
+        
+        .research-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .research-content p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* FAQ */
+        .faq {
+            background: var(--white);
+        }
+        
+        .faq-list {
+            margin-top: 3rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .faq-item {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        .faq-item h4 {
+            font-size: 1.25rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold) 0%, #D4B87A 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .header-phone {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .two-col,
+            .conditions-grid,
+            .protocol-grid,
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">CLARITIV</a>
+            <nav class="nav-links">
+                <a href="/#conditions">What We Treat</a>
+                <a href="/ketamine-therapy.html">Ketamine Therapy</a>
+                <a href="/veterans-psychedelic-therapy.html">Psychedelic Therapy</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+                <a href="tel:+17312565333" class="header-phone">(731) 256-5333</a>
+                <a href="coming-soon.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem;">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Evidence-Based Treatment</div>
+            <h1>When Nothing Else Works</h1>
+            <p class="hero-subtitle">
+                Ketamine infusion therapy for treatment-resistant depression and trauma. 
+                Expert patient selection ensures exceptional outcomes.
+            </p>
+            <div class="hero-cta">
+                <a href="coming-soon.html" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#protocols" class="btn btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Ketamine -->
+    <section class="what-is">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Understanding the Treatment</div>
+                <h2 class="section-title">What is Ketamine Therapy?</h2>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <h3>A Breakthrough in Mental Health Treatment</h3>
+                    <p>
+                        Ketamine therapy works differently than traditional antidepressants. While conventional 
+                        medications can take weeks or months to show effects, ketamine often provides relief 
+                        within 24-48 hours.
+                    </p>
+                    <p>
+                        Originally used as an anesthetic, ketamine has been shown to rapidly reduce symptoms by 
+                        targeting NMDA receptors in the brain and promoting neural plasticity, your brain's ability 
+                        to form new connections and heal.
+                    </p>
+                    <p>
+                        Our supervised IV infusions are administered in a calm, comfortable setting with continuous 
+                        medical monitoring throughout your session.
+                    </p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">75%</div>
+                        <div class="stat-label">Success rate with careful patient selection</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24hrs</div>
+                        <div class="stat-label">Time to initial symptom relief</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Years of safe medical use</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">FDA</div>
+                        <div class="stat-label">Approved & proven effective</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach - NEW -->
+    <section class="approach">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why We're Different</div>
+                <h2 class="section-title">Careful Patient Selection = Better Outcomes</h2>
+            </div>
+
+            <div class="approach-intro">
+                <p>
+                    Many ketamine clinics operate like "Botox clinics." If you have a credit card, they'll treat you. 
+                    We don't. We carefully evaluate every patient to ensure ketamine is truly right for you.
+                </p>
+                <p style="margin-top: 1rem;">
+                    We'll be honest with you. Sometimes that means saying "you're an excellent candidate." Sometimes 
+                    it means "let's address your medication regimen first." And sometimes it means "ketamine isn't 
+                    the right treatment for you." Our goal is helping people, not maximizing revenue.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions -->
+    <section class="conditions">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Treat</div>
+                <h2 class="section-title">Our Primary Focus Areas</h2>
+                <p class="section-description">
+                    Ketamine therapy has shown the most remarkable effectiveness for two primary conditions.
+                </p>
+            </div>
+
+            <div class="conditions-grid">
+                <div class="condition-card">
+                    <div class="condition-icon">🧠</div>
+                    <h3>Treatment-Resistant Depression</h3>
+                    <p>
+                        Ketamine offers a new pathway to relief through a completely different mechanism than 
+                        traditional antidepressants. Particularly effective for:
+                    </p>
+                    <ul>
+                        <li>Depression with hypersomnia (oversleeping)</li>
+                        <li>Seasonal affective disorder</li>
+                        <li>Bipolar depression</li>
+                        <li>Depression that hasn't responded to multiple medications</li>
+                        <li>Suicidal ideation in crisis situations</li>
+                    </ul>
+                </div>
+                
+                <div class="condition-card">
+                    <div class="condition-icon">🎖️</div>
+                    <h3>PTSD & Trauma</h3>
+                    <p>
+                        Ketamine is highly effective at dialing down the autonomic fight-or-flight response 
+                        and pulling people out of the parasympathetic freeze state. Particularly effective for:
+                    </p>
+                    <ul>
+                        <li>Combat-related PTSD (we honor veterans with 20% discount)</li>
+                        <li>Complex trauma with hypervigilance</li>
+                        <li>Dissociative freeze states</li>
+                        <li>Trauma-fueled anxiety</li>
+                        <li>Treatment-resistant trauma symptoms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; padding: 2rem; background: var(--cream); border-radius: 0.5rem; text-align: center;">
+                <h4 style="font-size: 1.5rem; color: var(--navy); margin-bottom: 1rem;">
+                    What About Other Conditions?
+                </h4>
+                <p style="color: var(--gray); line-height: 1.8;">
+                    While ketamine has shown promise for conditions like premenstrual syndrome and autistic burnout, 
+                    our primary expertise and focus remains treatment-resistant depression and trauma. During your 
+                    consultation, we'll provide an honest assessment of whether ketamine is likely to help you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="expect">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Journey</div>
+                <h2 class="section-title">What to Expect</h2>
+                <p class="section-description">
+                    Every step of your treatment is designed for comfort, safety, and effectiveness.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-step">
+                    <h3>Before Your Session</h3>
+                    <p>
+                        <strong>Initial Consultation:</strong> We'll review your medical history, current medications, 
+                        substance use, and treatment goals. We'll provide an honest assessment of whether you're an 
+                        excellent candidate, a 50/50 candidate, or not yet ready for ketamine therapy.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Pre-Treatment Optimization:</strong> Sometimes we'll recommend addressing medication 
+                        issues or substance use before starting ketamine. This ensures the best possible outcome.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Preparation:</strong> Avoid eating 4 hours before your appointment. Arrange for 
+                        someone to drive you home. Wear comfortable clothing.
+                    </p>
+                </div>
+                
+                <div class="timeline-step">
+                    <h3>During Your Session</h3>
+                    <p>
+                        <strong>Setting:</strong> You'll relax in a private, comfortable room with dimmed lighting 
+                        and calming music. Many patients use eye masks and headphones.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Administration:</strong> The ketamine infusion lasts 40-60 minutes. You'll remain 
+                        awake but may feel deeply relaxed or have mild dissociative sensations. Our medical team 
+                        monitors you continuously with vitals checks every 15 minutes.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Experience:</strong> Most patients describe a peaceful, introspective state. Some 
+                        report visual or sensory shifts. All effects are temporary and resolve shortly after the infusion ends.
+                    </p>
+                </div>
+                
+                <div class="timeline-step">
+                    <h3>After Your Session</h3>
+                    <p>
+                        <strong>Recovery:</strong> You'll rest in our clinic for 20-30 minutes as the effects 
+                        wear off. Most patients feel normal within 1-2 hours.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Results:</strong> Many patients notice improvement within 24 hours. Effects build 
+                        over the course of your treatment series. We'll schedule follow-up appointments to track 
+                        your progress and adjust your protocol as needed.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Next Steps:</strong> Rest at home for the remainder of the day. No driving, 
+                        operating machinery, or making major decisions for 24 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Protocols -->
+    <section class="protocols" id="protocols">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Investment in Your Health</div>
+                <h2 class="section-title">Treatment Protocols & Pricing</h2>
+                <p class="section-description">
+                    We offer flexible options to meet your needs. All packages include comprehensive medical 
+                    monitoring and personalized care.
+                </p>
+            </div>
+
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h3>Induction Series</h3>
+                    <div class="protocol-price">$2,400</div>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        6 infusions over 2-3 weeks
+                    </p>
+                    <ul>
+                        <li>Comprehensive initial evaluation</li>
+                        <li>Honest candidacy assessment</li>
+                        <li>6 ketamine infusions (40-60 min each)</li>
+                        <li>Continuous medical monitoring</li>
+                        <li>Post-treatment follow-up calls</li>
+                        <li>Personalized treatment adjustments</li>
+                        <li>Progress tracking & documentation</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="coming-soon.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="protocol-card">
+                    <h3>Maintenance Therapy</h3>
+                    <div class="protocol-price">$450</div>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Per session (after induction)
+                    </p>
+                    <ul>
+                        <li>Single ketamine infusion</li>
+                        <li>Flexible scheduling (every 2-8 weeks)</li>
+                        <li>Ongoing symptom monitoring</li>
+                        <li>Treatment plan adjustments</li>
+                        <li>Same compassionate care team</li>
+                        <li>20% veteran discount available</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="coming-soon.html" class="btn btn-primary">Schedule Session</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--white); border-radius: 0.5rem; text-align: center;">
+                <h4 style="font-size: 1.5rem; color: var(--navy); margin-bottom: 1rem;">
+                    Veterans Discount Program
+                </h4>
+                <p style="color: var(--gray); line-height: 1.8;">
+                    All honorably discharged veterans receive <strong style="color: var(--gold);">20% off</strong> 
+                    all ketamine therapy services. Thank you for your service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="safety">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Safety First</div>
+                <h2 class="section-title">Safety & Monitoring</h2>
+                <p class="section-description">
+                    Your safety and comfort are our highest priorities. Every session includes comprehensive 
+                    medical oversight.
+                </p>
+            </div>
+
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <div class="safety-icon">👨‍⚕️</div>
+                    <div>
+                        <h4>Expert Providers</h4>
+                        <p>
+                            All treatments administered by experienced psychiatric nurse practitioners with 
+                            specialized ketamine therapy training and MD oversight.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="safety-item">
+                    <div class="safety-icon">📊</div>
+                    <div>
+                        <h4>Continuous Monitoring</h4>
+                        <p>
+                            Vital signs checked every 15 minutes during infusion. Pulse oximetry, blood pressure, 
+                            and heart rate continuously monitored.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="safety-item">
+                    <div class="safety-icon">🏥</div>
+                    <div>
+                        <h4>Medical-Grade Equipment</h4>
+                        <p>
+                            State-of-the-art infusion pumps, emergency equipment, and medical supplies ensure 
+                            the highest standard of care.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="safety-item">
+                    <div class="safety-icon">✅</div>
+                    <div>
+                        <h4>Comprehensive Screening</h4>
+                        <p>
+                            Thorough psychiatric and medical evaluation ensures ketamine is safe and appropriate 
+                            for you. We review all medications, substances, and conditions before treatment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research -->
+    <section class="research">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Evidence-Based Treatment</div>
+                <h2 class="section-title">Proven by Research</h2>
+            </div>
+
+            <div class="research-content">
+                <p>
+                    Ketamine therapy is backed by decades of research from major institutions including Yale, 
+                    Harvard, Johns Hopkins, and the National Institute of Mental Health. Studies consistently 
+                    demonstrate ketamine's effectiveness for treatment-resistant mental health conditions.
+                </p>
+                <p>
+                    With careful patient selection and proper administration, we achieve strong success rates 
+                    for appropriate candidates through our thoughtful, individualized approach.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Common Questions</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>How do you determine if I'm a good candidate?</h4>
+                    <p>
+                        During your consultation, we'll review your psychiatric history, current medications, 
+                        substance use, and specific symptoms. We place you in one of three categories: excellent 
+                        candidate, 50/50 candidate (with factors working against you), or not yet ready. We believe 
+                        in honest assessment over maximizing revenue.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I'm not ready for ketamine yet?</h4>
+                    <p>
+                        Sometimes we recommend addressing other issues first, like optimizing your medication regimen, 
+                        reducing substance use, or working with a therapist. Ketamine works best when other factors 
+                        are stable. We'd rather have you succeed later than fail now.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is ketamine therapy safe?</h4>
+                    <p>
+                        Yes. Ketamine has been used safely in medical settings for over 50 years. At the doses used 
+                        for mental health treatment, side effects are minimal and temporary. All sessions are 
+                        medically supervised with continuous monitoring.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How quickly will I see results?</h4>
+                    <p>
+                        Many patients notice improvement within 24 hours of their first infusion. The full benefits 
+                        typically build over the course of the 6-session induction series. Individual results vary.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How long do the effects last?</h4>
+                    <p>
+                        After the initial induction series, most patients maintain results with periodic booster 
+                        sessions every 2-8 weeks. The frequency is personalized based on your response and needs.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Does insurance cover ketamine therapy?</h4>
+                    <p>
+                        Most insurance plans do not currently cover IV ketamine infusions for mental health. However, 
+                        we provide documentation you can submit for potential reimbursement. We also offer veteran 
+                        discounts and flexible payment options.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I continue my current medications?</h4>
+                    <p>
+                        In most cases, yes. Ketamine works through a different mechanism than traditional 
+                        antidepressants. However, sometimes we'll recommend optimizing your medications before 
+                        starting ketamine for best results. We'll review everything during your consultation.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do I need to stop drinking or using marijuana?</h4>
+                    <p>
+                        Heavy alcohol or marijuana use significantly reduces ketamine's effectiveness. If this 
+                        applies to you, we'll discuss a plan to address it before starting treatment. Think of 
+                        ketamine as fertilizer in the garden of you. Substance use is poison in that garden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for an Honest Evaluation?</h2>
+            <p>Let's determine if ketamine therapy is right for you.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+17312565333" class="btn btn-primary" style="background: var(--navy); color: var(--white);">
+                    Call (731) 256-5333
+                </a>
+                <a href="/" class="btn btn-secondary" style="border-color: var(--navy); color: var(--navy);">
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 1rem;">
+                <strong style="color: var(--gold); font-size: 1.25rem; font-family: 'Cormorant Garamond', serif;">
+                    CLARITIV HEALTH
+                </strong>
+            </p>
+            <p style="margin-bottom: 1rem;">
+                468 N. Parkway, Jackson, TN 38305<br>
+                <a href="tel:+17312565333">(731) 256-5333</a><br>
+                <a href="mailto:info@claritivhealth.com">info@claritivhealth.com</a>
+            </p>
+            <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 2rem;">
+                © 2026 Claritiv Health LLC. All rights reserved.<br>
+                <a href="/">Homepage</a> • 
+                <a href="veterans-psychedelic-therapy.html">Psychedelic Therapy</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychedelic Therapy | Claritiv Health</title>
+    <meta name="description" content="Claritiv Health is committed to bringing FDA-approved psychedelic therapies to veterans and civilians suffering from PTSD, depression, and treatment-resistant conditions.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #C5A86B;
+            --navy: #132B4C;
+            --cream: #FDF7F4;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--navy);
+            line-height: 1.6;
+            background: var(--cream);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            white-space: nowrap;
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .header-phone {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+            color: var(--white);
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        
+        .btn-primary:hover {
+            background: #D4B87A;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Executive Order Section */
+        .eo-section {
+            background: var(--white);
+        }
+        
+        .eo-highlight {
+            background: linear-gradient(135deg, #f8f9fa 0%, var(--cream) 100%);
+            border-left: 4px solid var(--gold);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin: 3rem 0;
+        }
+        
+        .eo-highlight h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+        
+        .eo-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cream);
+            border-radius: 0.5rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Key Points */
+        .key-points {
+            display: grid;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .key-point {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .key-point-icon {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .key-point-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+        
+        .key-point-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* Commitment Section */
+        .commitment-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+        
+        .commitment-section .section-title,
+        .commitment-section .section-label {
+            color: var(--white);
+        }
+        
+        .commitment-section .section-description {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .commitment-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2.5rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        
+        .commitment-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .commitment-card ul {
+            list-style: none;
+            text-align: left;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .commitment-card li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .commitment-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .commitment-card li:before {
+            content: "✓";
+            color: var(--gold);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+        
+        /* Veterans Section */
+        .veterans-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, var(--white) 100%);
+        }
+        
+        .veterans-offer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .veterans-offer h3 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .veterans-offer .discount {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            margin: 1rem 0;
+        }
+        
+        .veterans-offer p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        /* Available Now Section */
+        .available-now {
+            background: var(--cream);
+        }
+        
+        .treatment-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        
+        .treatment-card h3 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .conditions-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .condition-tag {
+            background: var(--cream);
+            padding: 0.75rem 1.25rem;
+            border-radius: 2rem;
+            text-align: center;
+            font-weight: 500;
+            color: var(--navy);
+            border: 1px solid #e5e7eb;
+        }
+        
+        /* Resources Section */
+        .resources-section {
+            background: var(--white);
+        }
+        
+        .resource-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .resource-link {
+            display: block;
+            padding: 2rem;
+            background: var(--cream);
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: var(--navy);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .resource-link h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+        
+        .resource-link p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--gold) 0%, #D4B87A 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .newsletter h3 {
+            font-size: 2.25rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: #1a3a5c;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .header-phone {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">CLARITIV</a>
+            <nav class="nav-links">
+                <a href="/#conditions">What We Treat</a>
+                <a href="/ketamine-therapy.html">Ketamine Therapy</a>
+                <a href="/veterans-psychedelic-therapy.html">Psychedelic Therapy</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+                <a href="tel:+17312565333" class="header-phone">(731) 256-5333</a>
+                <a href="coming-soon.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; background: var(--gold); color: var(--navy); border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Pioneering Mental Health Treatment</div>
+            <h1>The Future of Mental Health Care Is Here</h1>
+            <p class="hero-subtitle">
+                Following President Trump's historic executive order, Claritiv Health is committed to bringing 
+                FDA-approved psychedelic therapies to veterans and civilians suffering from PTSD, depression, 
+                and treatment-resistant conditions.
+            </p>
+            <div class="hero-cta">
+                <a href="/coming-soon.html" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#commitment" class="btn btn-secondary">Our Commitment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Order Section -->
+    <section class="eo-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">April 18, 2026</div>
+                <h2 class="section-title">A Turning Point in Mental Health Treatment</h2>
+                <p class="section-description">
+                    President Trump signed an executive order to accelerate access to psychedelic therapies 
+                    for patients with serious mental illness, particularly our nation's veterans.
+                </p>
+            </div>
+
+            <div class="eo-highlight">
+                <h3>What the Executive Order Does</h3>
+                <p style="color: var(--gray); line-height: 1.8;">
+                    This landmark order directs the FDA and DEA to establish pathways for patients to access 
+                    investigational psychedelic drugs, including ibogaine, psilocybin, and MDMA, that are 
+                    currently under FDA review and have met basic safety requirements.
+                </p>
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <div class="key-point-icon">1</div>
+                    <div class="key-point-content">
+                        <h4>Fast-Track FDA Approvals</h4>
+                        <p>National Priority Vouchers for psychedelic drugs with Breakthrough Therapy designation, 
+                           cutting red tape and accelerating review timelines.</p>
+                    </div>
+                </div>
+                
+                <div class="key-point">
+                    <div class="key-point-icon">2</div>
+                    <div class="key-point-content">
+                        <h4>Right to Try Access</h4>
+                        <p>Eligible patients can access investigational psychedelics (especially ibogaine) 
+                           still under FDA review through expanded Right to Try pathways.</p>
+                    </div>
+                </div>
+                
+                <div class="key-point">
+                    <div class="key-point-icon">3</div>
+                    <div class="key-point-content">
+                        <h4>$50 Million in Federal Funding</h4>
+                        <p>ARPA-H matching grants for states investing in psychedelic research programs 
+                           for serious mental illness populations.</p>
+                    </div>
+                </div>
+                
+                <div class="key-point">
+                    <div class="key-point-icon">4</div>
+                    <div class="key-point-content">
+                        <h4>DEA Rescheduling Initiative</h4>
+                        <p>Attorney General will review successful Phase 3 clinical trials for immediate 
+                           rescheduling upon FDA approval, making treatments prescribable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eo-stats">
+                <div class="stat-card">
+                    <div class="stat-number">14M+</div>
+                    <div class="stat-label">American adults with serious mental illness</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6,000+</div>
+                    <div class="stat-label">Veteran suicides annually for 20+ years</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2x</div>
+                    <div class="stat-label">Veteran suicide rate vs. civilian population</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section" id="commitment">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color: var(--gold);">Our Promise</div>
+                <h2 class="section-title">Claritiv's Commitment to Pioneering Care</h2>
+                <p class="section-description">
+                    We are monitoring FDA approval pathways and preparing to offer these breakthrough treatments 
+                    the moment they become legally available.
+                </p>
+            </div>
+
+            <div class="commitment-grid">
+                <div class="commitment-card">
+                    <h3>Ibogaine Therapy</h3>
+                    <ul>
+                        <li>Opioid addiction treatment</li>
+                        <li>Alcohol dependence</li>
+                        <li>Stimulant addiction</li>
+                        <li>Long-term craving reduction</li>
+                    </ul>
+                </div>
+                
+                <div class="commitment-card">
+                    <h3>Psilocybin Therapy</h3>
+                    <ul>
+                        <li>Treatment-resistant depression</li>
+                        <li>Major depressive disorder</li>
+                        <li>End-of-life anxiety</li>
+                        <li>Existential distress</li>
+                    </ul>
+                </div>
+                
+                <div class="commitment-card">
+                    <h3>MDMA-Assisted Therapy</h3>
+                    <ul>
+                        <li>PTSD (especially veterans)</li>
+                        <li>Complex trauma</li>
+                        <li>Social anxiety disorder</li>
+                        <li>Therapy enhancement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem;">
+                    We are actively preparing our clinical team, facilities, and protocols to deliver these 
+                    treatments safely and effectively once approved.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veterans Section -->
+    <section class="veterans-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Honoring Those Who Served</div>
+                <h2 class="section-title">Special Veterans Program</h2>
+                <p class="section-description">
+                    At Claritiv, we recognize the unique mental health challenges faced by our nation's veterans. 
+                    We're committed to making treatment accessible and affordable.
+                </p>
+            </div>
+
+            <div class="veterans-offer">
+                <h3>Veterans Discount Program</h3>
+                <div class="discount">20% OFF</div>
+                <p>
+                    All honorably discharged veterans receive 20% off ketamine infusion therapy and all future 
+                    FDA-approved psychedelic treatments. Valid military ID required.
+                </p>
+                <a href="/coming-soon.html" class="btn btn-primary">Schedule Your Consultation</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--navy);">
+                    Why Veterans Choose Claritiv
+                </h3>
+                <div class="key-points">
+                    <div class="key-point">
+                        <div class="key-point-icon">✓</div>
+                        <div class="key-point-content">
+                            <h4>Specialized PTSD Treatment</h4>
+                            <p>Our ketamine protocols are specifically designed for combat-related trauma 
+                               and service-related PTSD.</p>
+                        </div>
+                    </div>
+                    <div class="key-point">
+                        <div class="key-point-icon">✓</div>
+                        <div class="key-point-content">
+                            <h4>Understanding Team</h4>
+                            <p>We work closely with VA mental health providers and understand the unique 
+                               challenges veterans face.</p>
+                        </div>
+                    </div>
+                    <div class="key-point">
+                        <div class="key-point-icon">✓</div>
+                        <div class="key-point-content">
+                            <h4>Early Access Commitment</h4>
+                            <p>Veterans will be prioritized for new psychedelic treatments as they receive 
+                               FDA approval.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Now -->
+    <section class="available-now">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">No Waiting Required</div>
+                <h2 class="section-title">Ketamine Therapy Available Today</h2>
+                <p class="section-description">
+                    While we prepare for future psychedelic therapies, ketamine infusion is FDA-approved, 
+                    proven effective, and available now for immediate relief.
+                </p>
+            </div>
+
+            <div class="treatment-card">
+                <h3>Conditions We Treat with Ketamine</h3>
+                <div class="conditions-list">
+                    <div class="condition-tag">Treatment-Resistant Depression</div>
+                    <div class="condition-tag">PTSD</div>
+                    <div class="condition-tag">Anxiety Disorders</div>
+                    <div class="condition-tag">Major Depressive Disorder</div>
+                    <div class="condition-tag">Suicidal Ideation</div>
+                    <div class="condition-tag">Chronic Pain</div>
+                </div>
+                
+                <p style="color: var(--gray); margin-top: 2rem; line-height: 1.8;">
+                    Ketamine infusion therapy has been shown to provide rapid relief, often within hours, for 
+                    patients who haven't responded to traditional antidepressants. It's a bridge to healing 
+                    while we await the next generation of psychedelic therapies.
+                </p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/coming-soon.html" class="btn btn-primary">Book Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Support & Information</div>
+                <h2 class="section-title">Veterans Resources</h2>
+                <p class="section-description">
+                    You're not alone. Access critical mental health support and learn more about the 
+                    government's psychedelic therapy initiative.
+                </p>
+            </div>
+
+            <div class="resource-links">
+                <a href="tel:988" class="resource-link">
+                    <h4>🆘 Veterans Crisis Line</h4>
+                    <p>24/7 confidential support for veterans in crisis. Call 988, then press 1.</p>
+                </a>
+                
+                <a href="https://www.va.gov/health-care/health-needs-conditions/mental-health/" 
+                   class="resource-link" target="_blank" rel="noopener">
+                    <h4>🏥 VA Mental Health Services</h4>
+                    <p>Access VA mental health care, PTSD treatment, and counseling services.</p>
+                </a>
+                
+                <a href="https://www.whitehouse.gov/fact-sheets/2026/04/fact-sheet-president-donald-j-trump-is-accelerating-medical-treatments-for-serious-mental-illness/" 
+                   class="resource-link" target="_blank" rel="noopener">
+                    <h4>📄 White House Fact Sheet</h4>
+                    <p>Official details on the psychedelic therapy executive order.</p>
+                </a>
+                
+                <a href="https://www.fda.gov/patients/learn-about-expanded-access-and-other-treatment-options/right-try" 
+                   class="resource-link" target="_blank" rel="noopener">
+                    <h4>🔬 FDA Right to Try</h4>
+                    <p>Learn about accessing investigational treatments under the Right to Try Act.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Stay Informed on New Treatments</h3>
+            <p>
+                Get email updates when FDA-approved psychedelic therapies become available at Claritiv.
+            </p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you! We will notify you when new treatments are approved.');">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 1rem;">
+                <strong style="color: var(--gold); font-size: 1.25rem; font-family: 'Cormorant Garamond', serif;">
+                    CLARITIV HEALTH
+                </strong>
+            </p>
+            <p style="margin-bottom: 1rem;">
+                468 N. Parkway, Jackson, TN 38305<br>
+                <a href="tel:+17312565333">(731) 256-5333</a><br>
+                <a href="mailto:info@claritivhealth.com">info@claritivhealth.com</a>
+            </p>
+            <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 2rem;">
+                © 2026 Claritiv Health LLC. All rights reserved.<br>
+                <a href="/">Return to Homepage</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

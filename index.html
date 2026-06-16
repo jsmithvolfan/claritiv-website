@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claritiv Health | Comprehensive Mental Health Treatment | Jackson, TN</title>
+<parameter name="description" content="Comprehensive mental health treatment facility in Jackson, TN offering psychiatric care, medication management, talk therapy, and ketamine infusion therapy for depression, PTSD, and anxiety.">
+<meta name="keywords" content="ketamine therapy, ketamine infusion, depression treatment, PTSD treatment, anxiety treatment, chronic pain, NAD therapy, IV therapy, North Jackson TN">
+<meta property="og:title" content="Claritiv Health | Comprehensive Mental Health Treatment">
+<meta property="og:description" content="Full-service mental health treatment facility offering psychiatric care, therapy, medication management, and innovative treatments.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logos/original-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--gold:#C5A86B;--gold2:#D7BD64;--navy:#132B4C;--navy-dark:#0B2143;--navy-darkest:#142030;--cream:#FDF7F4;--white:#FFFFFF;--black:#000000;
+--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;
+--nav-h:90px;--nav-h-scroll:70px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);color:var(--navy);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;line-height:1.2}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ========== SPLASH ========== */
+#splash{position:fixed;inset:0;z-index:10000;background:var(--navy-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s ease,transform .8s ease}
+#splash.hide{opacity:0;transform:translateY(-100%);pointer-events:none}
+#splash img{width:clamp(220px,35vw,400px);opacity:0;transform:scale(.85);animation:splashIn .9s .3s ease forwards}
+#splash p{font-family:var(--font-heading);font-style:italic;color:var(--gold);font-size:clamp(1.1rem,2.5vw,1.6rem);margin-top:20px;opacity:0;animation:fadeUp .8s .9s ease forwards;letter-spacing:.04em}
+@keyframes splashIn{to{opacity:1;transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ========== NAV ========== */
+#nav{position:fixed;top:0;left:0;right:0;z-index:9000;padding:0 clamp(16px,3vw,48px);display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);transition:all .4s ease;background:transparent}
+#nav.scrolled{background:rgba(11,33,67,.97);backdrop-filter:blur(12px);height:var(--nav-h-scroll);box-shadow:0 2px 30px rgba(0,0,0,.3)}
+#nav .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+#nav .nav-logo img{height:50px;transition:height .4s ease;filter:drop-shadow(0 0 8px rgba(197,168,107,.4))}
+#nav.scrolled .nav-logo img{height:38px}
+.nav-logo-text{font-family:var(--font-heading);color:var(--gold);font-size:1.1rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;white-space:nowrap}
+#nav .nav-links{display:flex;align-items:center;gap:clamp(16px,2.5vw,36px)}
+#nav .nav-links a{font-size:.75rem;font-weight:500;color:var(--gold);letter-spacing:.04em;text-transform:uppercase;position:relative;transition:color .3s}
+#nav .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s}
+#nav .nav-links a:hover{color:var(--white)}
+#nav .nav-links a:hover::after{width:100%}
+.nav-phone{color:var(--gold)!important;font-weight:600!important;letter-spacing:.02em!important}
+.nav-cta{background:var(--gold)!important;color:var(--navy-dark)!important;padding:10px 24px!important;border-radius:50px!important;font-weight:600!important;font-size:.82rem!important;letter-spacing:.06em!important;text-transform:uppercase!important;transition:all .3s!important;white-space:nowrap}
+.nav-cta:hover{background:var(--gold2)!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(197,168,107,.4)!important}
+.nav-cta::after{display:none!important}
+/* hamburger */
+.hamburger{display:none;flex-direction:column;gap:6px;width:30px;cursor:pointer;z-index:9999;padding:4px 0}
+.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+.mobile-menu{position:fixed;inset:0;background:var(--navy-dark);z-index:9800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:var(--font-heading);font-size:1.8rem;color:var(--white);letter-spacing:.04em;transition:color .3s}
+.mobile-menu a:hover{color:var(--gold)}
+@media(max-width:1024px){
+.nav-links{display:none!important}
+.hamburger{display:flex}
+}
+
+/* ========== HERO ========== */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+#hero .hero-bg{position:absolute;inset:-20%;width:140%;height:140%;background:url('assets/hero-bg.jpg') left center/cover no-repeat;filter:brightness(.55) saturate(.8);will-change:transform}
+#hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,33,67,.35) 0%,rgba(19,43,76,.5) 50%,rgba(20,32,48,.75) 100%)}
+/* particles canvas */
+#hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+/* ambient gold lights */
+#hero .ambient{position:absolute;border-radius:50%;filter:blur(120px);opacity:.15;pointer-events:none}
+#hero .ambient-1{width:500px;height:500px;background:var(--gold);top:-10%;right:-10%;animation:ambFloat 8s ease-in-out infinite alternate}
+#hero .ambient-2{width:400px;height:400px;background:var(--gold2);bottom:-10%;left:-5%;animation:ambFloat 10s 2s ease-in-out infinite alternate}
+@keyframes ambFloat{from{transform:translate(0,0)}to{transform:translate(30px,-30px)}}
+#hero .hero-content{position:relative;z-index:2;max-width:800px;padding:120px 24px 80px}
+#hero .hero-logo{width:clamp(300px,50vw,580px);margin:0 auto 20px;filter:drop-shadow(0 4px 40px rgba(197,168,107,.35))}
+#hero .hero-tagline{font-family:var(--font-heading);font-style:italic;color:var(--gold);font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:.06em;margin-bottom:28px;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+#hero .hero-divider{width:60px;height:2px;background:var(--gold);margin:0 auto 28px}
+#hero .hero-desc{color:var(--gold);font-size:clamp(.88rem,1.3vw,1.05rem);line-height:1.9;max-width:640px;margin:0 auto 40px;font-weight:300;text-shadow:0 1px 10px rgba(0,0,0,.3)}
+#hero .hero-headline{font-family:var(--font-heading);color:var(--gold);font-size:clamp(1.8rem,4vw,3.2rem);font-weight:400;margin-bottom:44px;letter-spacing:.02em;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy-dark);padding:14px 36px;border-radius:50px;font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;transition:all .3s;display:inline-block}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(197,168,107,.4)}
+.btn-outline{border:1.5px solid var(--gold);color:var(--gold);padding:14px 36px;border-radius:50px;font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;transition:all .3s;display:inline-block}
+.btn-outline:hover{background:var(--gold);color:var(--navy-dark);transform:translateY(-2px)}
+
+/* ========== CREDIBILITY BAR ========== */
+#credibility{background:var(--navy-darkest);padding:40px 0;border-top:1px solid rgba(197,168,107,.15);border-bottom:1px solid rgba(197,168,107,.15)}
+.cred-inner{display:flex;align-items:center;justify-content:center;gap:clamp(28px,5vw,64px);flex-wrap:wrap}
+.cred-badge{display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.7;transition:opacity .3s}
+.cred-badge:hover{opacity:1}
+.cred-badge svg{width:36px;height:36px;fill:var(--gold)}
+.cred-badge span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;text-align:center}
+
+/* ========== GOLD SECTION DIVIDERS ========== */
+.gold-divider{height:1px;background:linear-gradient(90deg,transparent 0%,var(--gold) 50%,transparent 100%);opacity:.3;margin:0}
+
+/* ========== REVEAL ANIMATION ========== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.15s}
+.reveal-delay-2{transition-delay:.3s}
+.reveal-delay-3{transition-delay:.45s}
+
+/* ========== SECTION TITLES ========== */
+.section-label{font-family:var(--font-body);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.section-title{font-family:var(--font-heading);font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:20px;letter-spacing:.02em}
+.section-divider{width:50px;height:2px;margin:0 auto 48px}
+
+/* ========== PULLQUOTE ========== */
+.pullquote-section{padding:100px 24px;text-align:center}
+.pullquote{font-family:var(--font-heading);font-style:italic;font-size:clamp(1.4rem,2.8vw,2.2rem);color:var(--gold);max-width:700px;margin:0 auto;line-height:1.5;letter-spacing:.02em}
+.pullquote-dark{background:var(--navy-dark)}
+.pullquote-light{background:var(--cream)}
+.pullquote-light .pullquote{color:var(--navy);opacity:.7}
+
+/* ========== LOGO BLEED ========== */
+.logo-bleed{text-align:center;padding:20px 0;overflow:hidden}
+.logo-bleed img{height:clamp(140px,20vw,220px);opacity:.55;margin:0 auto;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.62;transform:scale(1.03)}}
+
+/* ========== STATS ========== */
+#stats{background:var(--cream);padding:130px 0;text-align:center}
+#stats .section-label{color:var(--gold)}
+#stats .section-title{color:var(--navy)}
+#stats .section-divider{background:var(--gold)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:40px}
+.stat-card{padding:40px 20px;border-radius:16px;background:linear-gradient(135deg,rgba(197,168,107,.04),rgba(215,189,100,.08));background-size:200% 200%;animation:statGradient 6s ease infinite;border:1.5px solid transparent;transition:all .4s}
+.stat-card:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(197,168,107,.12)}
+@keyframes statGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.stat-ring{width:140px;height:140px;margin:0 auto 20px;position:relative}
+.stat-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.stat-ring circle{fill:none;stroke-width:6}
+.stat-ring .bg{stroke:rgba(19,43,76,.1)}
+.stat-ring .fg{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:377;stroke-dashoffset:377;transition:stroke-dashoffset 1.5s ease}
+.stat-ring.animated .fg{animation:ringPulse 2s 1.5s ease-in-out}
+@keyframes ringPulse{0%{filter:drop-shadow(0 0 0 rgba(197,168,107,0))}50%{filter:drop-shadow(0 0 8px rgba(197,168,107,.6))}100%{filter:drop-shadow(0 0 0 rgba(197,168,107,0))}}
+.stat-ring .stat-val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:2.8rem;font-weight:700;color:var(--navy)}
+.stat-card p{font-size:.9rem;color:rgba(19,43,76,.7);line-height:1.5;max-width:200px;margin:0 auto}
+.stats-cite{font-size:.75rem;color:rgba(19,43,76,.5);font-style:italic}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+@media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
+
+/* ========== WHO WE HELP ========== */
+#who-we-help{background:var(--cream);padding:140px 0;text-align:center}
+#who-we-help .section-label{color:var(--gold)}
+#who-we-help .section-title{color:var(--navy)}
+#who-we-help .section-divider{background:var(--gold)}
+.who-intro{max-width:640px;margin:0 auto 72px;font-size:clamp(1rem,1.4vw,1.1rem);line-height:1.9;color:rgba(19,43,76,.65)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 80px;max-width:960px;margin:0 auto 64px;text-align:left}
+.who-item{padding:32px 0;border-top:1px solid rgba(197,168,107,.25)}
+.who-item h4{font-family:var(--font-heading);font-size:1.35rem;color:var(--navy);margin-bottom:12px;font-weight:500}
+.who-item p{font-size:.92rem;color:rgba(19,43,76,.6);line-height:1.8;max-width:400px}
+.who-closing{font-family:var(--font-heading);font-size:clamp(1.3rem,2.5vw,2rem);color:var(--navy);max-width:600px;margin:0 auto;line-height:1.4;font-weight:400}
+.who-closing em{color:var(--gold);font-style:italic}
+@media(max-width:768px){.who-grid{grid-template-columns:1fr;gap:0}}
+
+/* ========== PRIVACY SECTION ========== */
+#privacy{background:var(--navy-dark);padding:140px 0;text-align:center;position:relative;overflow:hidden}
+#privacy .privacy-ambient{position:absolute;width:400px;height:400px;border-radius:50%;background:var(--gold);filter:blur(160px);opacity:.06;top:-100px;right:-100px;pointer-events:none}
+#privacy .section-label{color:var(--gold)}
+#privacy .section-title{color:var(--white)}
+#privacy .section-divider{background:var(--gold)}
+.privacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:960px;margin:0 auto;align-items:center}
+.privacy-content{text-align:left}
+.privacy-list{list-style:none;padding:0}
+.privacy-list li{padding:20px 0;border-bottom:1px solid rgba(197,168,107,.12);display:flex;align-items:flex-start;gap:16px;font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.7}
+.privacy-list li:last-child{border-bottom:none}
+.privacy-list li svg{width:20px;height:20px;fill:var(--gold);flex-shrink:0;margin-top:3px}
+.privacy-closing{font-family:var(--font-heading);font-style:italic;font-size:clamp(1.1rem,1.8vw,1.4rem);color:var(--gold);margin-top:40px;line-height:1.5}
+.privacy-image{background:var(--navy);border-radius:12px;height:400px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(197,168,107,.15);position:relative;overflow:hidden}
+.privacy-image::after{content:'Private Treatment Suite';font-family:var(--font-heading);font-style:italic;color:rgba(197,168,107,.3);font-size:1.1rem;letter-spacing:.08em}
+@media(max-width:768px){.privacy-grid{grid-template-columns:1fr}.privacy-image{height:280px}}
+
+/* ========== CONDITIONS ========== */
+#conditions{background:var(--navy-dark);padding:140px 0;text-align:center;position:relative;overflow:hidden}
+#conditions::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(197,168,107,.04) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(197,168,107,.03) 0%,transparent 50%);pointer-events:none}
+#conditions .section-label{color:var(--gold)}
+#conditions .section-title{color:var(--white)}
+#conditions .section-divider{background:var(--gold)}
+.conditions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.condition-card{background:rgba(253,247,244,.04);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:24px 20px 20px;text-align:left;position:relative;overflow:hidden;transition:all .45s cubic-bezier(.25,.46,.45,.94)}
+.condition-card::before{content:'';position:absolute;top:14px;bottom:14px;left:0;width:3px;background:linear-gradient(180deg,var(--gold),rgba(197,168,107,.3));border-radius:0 2px 2px 0;transition:all .4s;opacity:.4}
+.condition-card:hover::before{opacity:1;box-shadow:0 0 12px rgba(197,168,107,.4)}
+.condition-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.25);border-color:rgba(197,168,107,.15);background:rgba(253,247,244,.06)}
+.condition-card .cond-icon{width:36px;height:36px;margin-bottom:12px;opacity:.7;transition:opacity .3s}
+.condition-card:hover .cond-icon{opacity:1}
+.condition-card h3{font-family:var(--font-heading);color:var(--white);font-size:1.3rem;margin-bottom:6px;font-weight:500;letter-spacing:.02em}
+.condition-card p{color:rgba(255,255,255,.4);font-size:.78rem;line-height:1.5;margin:0}
+@media(max-width:900px){.conditions-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:480px){.conditions-grid{grid-template-columns:1fr}}
+
+/* ========== SERVICES ========== */
+#services{background:var(--cream);padding:130px 0;text-align:center}
+#services .section-label{color:var(--gold)}
+#services .section-title{color:var(--navy)}
+#services .section-divider{background:var(--gold)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);border-radius:12px;padding:48px 28px 40px;text-align:center;border-top:3px solid transparent;transition:all .4s;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.service-card:hover{border-top-color:var(--gold);transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.service-card .svc-icon{width:48px;height:48px;margin:0 auto 20px}
+.service-card h3{font-family:var(--font-heading);font-size:1.35rem;color:var(--navy);margin-bottom:14px;font-weight:500}
+.service-card p{font-size:.88rem;color:rgba(19,43,76,.65);line-height:1.7;margin-bottom:20px}
+.service-card a{color:var(--gold);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;transition:color .3s}
+.service-card a:hover{color:var(--navy)}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr}}
+
+/* ========== TIMELINE ========== */
+#journey{background:var(--navy-dark);padding:130px 0;text-align:center}
+#journey .section-label{color:var(--gold)}
+#journey .section-title{color:var(--white)}
+#journey .section-divider{background:var(--gold)}
+.timeline{display:flex;justify-content:center;gap:0;position:relative;max-width:1000px;margin:0 auto 48px;padding:0 20px}
+.timeline::before{content:'';position:absolute;top:36px;left:calc(12.5% + 10px);right:calc(12.5% + 10px);height:2px;background:var(--gold);opacity:.4}
+.tl-step{flex:1;text-align:center;position:relative;padding:0 12px}
+.tl-num{width:72px;height:72px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-heading);font-size:1.6rem;color:var(--gold);background:var(--navy-dark);position:relative;z-index:2;transition:all .4s}
+.tl-step:hover .tl-num{background:var(--gold);color:var(--navy-dark)}
+.tl-step h4{font-family:var(--font-heading);color:var(--white);font-size:1.15rem;margin-bottom:10px;font-weight:500}
+.tl-step p{color:rgba(255,255,255,.6);font-size:.85rem;line-height:1.6}
+@media(max-width:768px){
+.timeline{flex-direction:column;gap:40px}
+.timeline::before{display:none}
+}
+
+/* ========== ABOUT ========== */
+#about{background:var(--cream);padding:140px 0;text-align:center}
+#about .section-label{color:var(--gold)}
+#about .section-title{color:var(--navy)}
+#about .section-divider{background:var(--gold)}
+#about .about-text{max-width:640px;margin:0 auto;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:2;color:rgba(19,43,76,.7)}
+#about .about-text p{margin-bottom:28px}
+#about .about-text strong{color:var(--navy);font-weight:600}
+#about .about-accent{font-family:var(--font-heading);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.8rem);color:var(--navy);margin-top:48px;display:block;line-height:1.4}
+
+/* ========== TESTIMONIALS ========== */
+#testimonials{background:var(--navy-dark);padding:130px 0;text-align:center}
+#testimonials .section-label{color:var(--gold)}
+#testimonials .section-title{color:var(--white)}
+#testimonials .section-divider{background:var(--gold)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:32px}
+.test-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:48px 32px 36px;text-align:left;position:relative;transition:all .4s}
+.test-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.test-card .quote-mark{font-family:var(--font-heading);font-size:5rem;color:var(--gold);opacity:.3;position:absolute;top:10px;left:24px;line-height:1}
+.test-card blockquote{color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.8;font-style:italic;margin-bottom:20px;position:relative;z-index:2}
+.test-card cite{color:var(--gold);font-size:.82rem;font-style:normal;font-weight:600;letter-spacing:.04em}
+.test-privacy{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:8px}
+@media(max-width:768px){.test-grid{grid-template-columns:1fr}}
+
+/* ========== FAQ ========== */
+#faq{background:var(--cream);padding:130px 0}
+#faq .section-label{color:var(--gold);text-align:center}
+#faq .section-title{color:var(--navy);text-align:center}
+#faq .section-divider{background:var(--gold)}
+.faq-list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(19,43,76,.1)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-family:var(--font-heading);font-size:1.2rem;color:var(--navy);font-weight:500;text-align:left;cursor:pointer;transition:color .3s}
+.faq-q:hover{color:var(--gold)}
+.faq-q .faq-icon{font-size:1.5rem;color:var(--gold);transition:transform .3s;flex-shrink:0;margin-left:16px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .4s ease}
+.faq-item.open .faq-a{max-height:800px;padding-bottom:24px}
+.faq-a p{font-size:.92rem;color:rgba(19,43,76,.65);line-height:1.8;margin-bottom:12px;max-width:640px}
+.faq-a p:last-child{margin-bottom:0}
+
+/* ========== SOCIAL ========== */
+#social{background:var(--navy-dark);padding:72px 0;text-align:center}
+#social h3{font-family:var(--font-heading);color:var(--white);font-size:1.8rem;margin-bottom:36px;font-weight:400}
+.social-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.social-link{display:flex;flex-direction:column;align-items:center;gap:10px;transition:all .3s;position:relative}
+.social-link::after{content:'';position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--gold);transition:width .3s;border-radius:2px}
+.social-link:hover::after{width:80%}
+.social-link:hover{transform:translateY(-4px)}
+.social-link:hover svg{filter:drop-shadow(0 0 12px rgba(197,168,107,.5))}
+.social-link svg{width:40px;height:40px;fill:var(--gold);transition:all .3s}
+.social-link span{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:500}
+
+/* ========== CONTACT ========== */
+#contact{background:var(--cream);padding:130px 0}
+#contact .section-title{color:var(--navy);text-align:center}
+#contact .section-divider{background:var(--gold)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-form-wrapper{background:var(--white);padding:36px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+#contactForm input:focus,#contactForm textarea:focus{outline:none;border-color:var(--gold)}
+#contactForm button:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 6px 20px rgba(19,43,76,.3)}
+.contact-info h4{font-family:var(--font-heading);font-size:1.3rem;color:var(--navy);margin-bottom:20px}
+.contact-info p{font-size:.92rem;color:rgba(19,43,76,.7);line-height:1.8;margin-bottom:12px}
+.contact-info strong{color:var(--navy)}
+.map-placeholder{background:var(--navy);border-radius:12px;height:320px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.9rem;overflow:hidden}
+.map-placeholder iframe{width:100%;height:100%;border:none;border-radius:12px}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+
+/* ========== CTA BANNER ========== */
+#cta-banner{background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);padding:100px 0;text-align:center}
+#cta-banner h2{font-family:var(--font-heading);color:var(--navy-dark);font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+#cta-banner p{color:rgba(11,33,67,.7);font-size:1.05rem;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.8}
+.btn-navy{background:var(--navy-dark);color:var(--white);padding:16px 42px;border-radius:50px;font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;transition:all .3s;display:inline-block}
+.btn-navy:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+
+/* ========== FOOTER ========== */
+#footer{background:var(--navy-darkest);padding:0;color:rgba(255,255,255,.5)}
+.footer-gold-line{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
+.footer-inner{padding:64px 0 0}
+.footer-top{display:grid;grid-template-columns:1fr 2fr 1fr;gap:40px;align-items:start;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-logo-left img{height:140px}
+.footer-logo-right{text-align:right}
+.footer-logo-right img{height:100px;margin-left:auto}
+.footer-center{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;text-align:center}
+.footer-center h5{font-family:var(--font-heading);color:var(--white);font-size:1rem;margin-bottom:12px;font-weight:500}
+.footer-center a{display:block;font-size:.82rem;margin-bottom:8px;transition:color .3s}
+.footer-center a:hover{color:var(--gold)}
+.footer-center p{font-size:.82rem;line-height:1.7}
+.footer-address{display:flex;align-items:flex-start;gap:8px;justify-content:center;margin-bottom:8px}
+.footer-address svg{width:14px;height:14px;fill:var(--gold);flex-shrink:0;margin-top:3px}
+.footer-cta-row{text-align:center;padding:32px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-cta-row .btn-gold{padding:12px 32px;font-size:.85rem}
+.footer-social{display:flex;justify-content:center;gap:20px;padding:28px 0}
+.footer-social svg{width:20px;height:20px;fill:rgba(255,255,255,.4);transition:fill .3s}
+.footer-social a:hover svg{fill:var(--gold)}
+.footer-bar{border-top:1px solid rgba(255,255,255,.06);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.75rem}
+.footer-bar span{opacity:.5}
+.footer-bar em{font-family:var(--font-heading);color:var(--gold);font-style:italic;opacity:.7}
+@media(max-width:768px){
+.footer-top{grid-template-columns:1fr;text-align:center}
+.footer-logo-right{text-align:center}
+.footer-logo-right img{margin:0 auto}
+.footer-center{grid-template-columns:1fr}
+.footer-bar{justify-content:center;text-align:center}
+}
+
+/* ========== CHAT WIDGET ========== */
+.chat-btn{position:fixed;bottom:28px;right:28px;width:60px;height:60px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;z-index:8000;box-shadow:0 4px 20px rgba(197,168,107,.4);transition:all .3s}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 6px 30px rgba(197,168,107,.6)}
+.chat-btn svg{width:28px;height:28px;fill:var(--navy-dark)}
+/* pulsing ring */
+.chat-btn::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--gold);opacity:0;animation:chatPulse 2.5s ease-in-out infinite}
+.chat-btn::after{content:'';position:absolute;top:-2px;right:-2px;width:14px;height:14px;border-radius:50%;background:#e74c3c;border:2px solid var(--navy-darkest);z-index:1}
+@keyframes chatPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.chat-popup{position:fixed;bottom:100px;right:28px;width:380px;background:var(--white);border-radius:16px;box-shadow:0 12px 48px rgba(0,0,0,.15);z-index:8000;padding:32px 28px 28px;opacity:0;transform:translateY(20px) scale(.95);pointer-events:none;transition:all .3s}
+.chat-popup.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.chat-popup .chat-close{position:absolute;top:12px;right:16px;font-size:1.2rem;color:rgba(0,0,0,.3);cursor:pointer;transition:color .3s}
+.chat-popup .chat-close:hover{color:var(--navy)}
+.chat-popup p{font-size:.92rem;color:var(--navy);line-height:1.7;margin-bottom:20px}
+.chat-actions{display:flex;flex-direction:column;gap:10px}
+.chat-action-btn{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:rgba(19,43,76,.04);border:1px solid rgba(19,43,76,.08);font-size:.85rem;color:var(--navy);font-weight:500;transition:all .3s;cursor:pointer;text-decoration:none}
+.chat-action-btn:hover{border-color:var(--gold);background:rgba(197,168,107,.08);color:var(--gold)}
+.chat-action-btn svg{width:18px;height:18px;fill:var(--gold);flex-shrink:0}
+
+/* ========== DROPLET SVG ========== */
+.droplet-svg{display:inline-block}
+</style>
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+<img src="assets/logos/gold-logo.png" alt="Claritiv Health">
+<p>Clear Mind. New Beginning.</p>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+<a href="#hero" class="nav-logo">
+<img src="assets/logos/gold-icon.png" alt="Claritiv Health">
+<span class="nav-logo-text">Claritiv</span>
+</a>
+<div class="nav-links">
+<a href="#conditions">What We Treat</a>
+<a href="ketamine-therapy.html">Ketamine Therapy</a>
+<a href="veterans-psychedelic-therapy.html">Psychedelic Therapy</a>
+<a href="#journey">How It Works</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a href="tel:+17312565333" class="nav-cta">Get Started</a>
+</div>
+<div class="hamburger" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="#conditions" onclick="closeMobile()">What We Treat</a>
+<a href="ketamine-therapy.html" onclick="closeMobile()">Ketamine Therapy</a>
+<a href="veterans-psychedelic-therapy.html" onclick="closeMobile()">Psychedelic Therapy</a>
+<a href="#journey" onclick="closeMobile()">How It Works</a>
+<a href="#about" onclick="closeMobile()">About</a>
+<a href="#faq" onclick="closeMobile()">FAQ</a>
+<a href="#contact" onclick="closeMobile()">Contact</a>
+<a href="coming-soon.html" class="btn-gold" onclick="closeMobile()" style="margin-top:12px">Get Started</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+<div class="hero-bg" id="heroBg"></div>
+<div class="hero-overlay"></div>
+<canvas id="hero-particles"></canvas>
+<div class="ambient ambient-1"></div>
+<div class="ambient ambient-2"></div>
+<div class="hero-content">
+<img src="assets/logos/gold-logo.png" alt="Claritiv Health" class="hero-logo reveal">
+<p class="hero-tagline reveal reveal-delay-1">Clear Mind. New Beginning.</p>
+<div class="hero-divider reveal reveal-delay-1"></div>
+<p class="hero-desc reveal reveal-delay-2">Claritiv Health is a comprehensive mental health treatment facility in Jackson, Tennessee. We offer psychiatric evaluation, medication management, evidence-based talk therapy, and innovative treatments like ketamine infusion therapy. Everything under one roof, designed around your comfort, your privacy, and your recovery.</p>
+<h1 class="hero-headline reveal reveal-delay-2">You Deserve to Feel Like Yourself Again.</h1>
+<div class="hero-ctas reveal reveal-delay-3">
+<a href="tel:+17312565333" class="btn-gold">Schedule Consultation</a>
+<a href="veterans-psychedelic-therapy.html" class="btn-outline">Veterans: Learn More</a>
+</div>
+</div>
+</section>
+
+<!-- CREDIBILITY BAR -->
+<section id="credibility">
+<div class="container">
+<div class="cred-inner">
+<div class="cred-badge reveal">
+<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+<span>FDA Recognized</span>
+</div>
+<div class="cred-badge reveal reveal-delay-1">
+<svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
+<span>HIPAA Compliant</span>
+</div>
+<div class="cred-badge reveal reveal-delay-2">
+<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+<span>Board Certified</span>
+</div>
+<div class="cred-badge reveal reveal-delay-3">
+<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+<span>Evidence Based</span>
+</div>
+<div class="cred-badge reveal reveal-delay-3">
+<svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+<span>Psychiatric Providers</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ABOUT (moved before Stats — emotion before data) -->
+<section id="about">
+<div class="container">
+<div class="logo-bleed" style="margin-bottom:-20px"><img src="assets/logos/original-logo.png" alt="" style="height:200px;opacity:.55"></div>
+<p class="section-label reveal">Our Story</p>
+<h2 class="section-title reveal">Why This Clinic Exists</h2>
+<div class="section-divider reveal"></div>
+<div class="about-text reveal">
+<p>In West Tennessee, the mental health system has a gap you could drive <strong>90 miles</strong> through. That's exactly how far patients have been driving to access comprehensive psychiatric care. For people already struggling to get out of bed, that distance isn't just inconvenient. It's a barrier that keeps them from getting better.</p>
+<p>Claritiv Health was founded by someone who saw this broken system firsthand. Not from a textbook, but from life. The endless medication carousel. The six-week waiting periods for drugs that might not work. The quiet desperation of watching people you love suffer while the system shrugs and says <em>"give it time."</em></p>
+<p>This facility exists because West Tennessee deserves access to comprehensive mental health treatment that actually works. Without the drive, without the wait, and without the stigma. We're not here to replace your doctor or your therapist. We're here to provide complete psychiatric care when the conventional playbook has run out of pages.</p>
+<span class="about-accent">"This isn't about quick fixes. It's about comprehensive care that gives people their lives back."</span>
+</div>
+<div style="width:50px;height:2px;background:var(--gold);margin:48px auto 0"></div>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- PULLQUOTE 1 -->
+<div class="pullquote-section pullquote-light reveal">
+<p class="pullquote">"The hardest part is making the call. Everything after that, we handle."</p>
+</div>
+
+<!-- WHO WE HELP -->
+<section id="who-we-help">
+<div class="container">
+<p class="section-label reveal">Who We Help</p>
+<h2 class="section-title reveal">This Is Who We Built This For</h2>
+<div class="section-divider reveal"></div>
+<p class="who-intro reveal">We don't treat conditions. We treat people. People who've been fighting longer than anyone around them realizes. If any of this sounds familiar, you're in the right place.</p>
+<div class="who-grid">
+<div class="who-item reveal">
+<h4>The High-Functioning Professional</h4>
+<p>You run meetings, hit deadlines, and hold it together for everyone around you. But behind closed doors, you're running on empty. Nobody knows because you've gotten too good at hiding it.</p>
+</div>
+<div class="who-item reveal reveal-delay-1">
+<h4>The Parent Who Can't Be Present</h4>
+<p>Your kids are right there, but anxiety has built a wall between you and the moments that matter. You're physically present but emotionally miles away, and the guilt makes it worse.</p>
+</div>
+<div class="who-item reveal reveal-delay-2">
+<h4>The Veteran Carrying Invisible Wounds</h4>
+<p>You served. You came home. But a part of you didn't. The nightmares, the hypervigilance, the numbness. They don't hand out Purple Hearts for those.</p>
+</div>
+<div class="who-item reveal reveal-delay-3">
+<h4>The One Who's Tried Everything</h4>
+<p>Three medications. Five. Ten. Therapy, supplements, meditation apps, the advice of well-meaning friends who don't understand. You haven't failed. Your treatments have.</p>
+</div>
+<div class="who-item reveal">
+<h4>The First Responder Who Carries Everyone Else</h4>
+<p>EMTs, nurses, doctors, paramedics, firefighters, police officers, psychiatrists. You spend every shift holding other people together. But nobody asks who's holding you. The burnout, the compassion fatigue, the things you've seen that you can't unsee. You deserve the same level of care you give everyone else.</p>
+</div>
+<div class="who-item reveal reveal-delay-1">
+<h4>The Person Told to "Give It Time"</h4>
+<p>You've given it time. Years of it. And you're still waiting for something to change. At some point, patience stops being a virtue and starts being a sentence.</p>
+</div>
+<div class="who-item reveal reveal-delay-1">
+<h4>Anyone Ready for Something Different</h4>
+<p>You don't need a dramatic story to walk through our doors. You just need to be tired of feeling this way and willing to try a different path.</p>
+</div>
+</div>
+<p class="who-closing reveal">You're not broken. <em>Your treatment was.</em></p>
+</div>
+</section>
+
+<!-- LOGO BLEED: Who We Help → Conditions -->
+<div class="logo-bleed" style="background:var(--cream)"><img src="assets/logos/original-logo.png" alt=""></div>
+
+<div class="gold-divider"></div>
+
+<!-- YOUR PRIVACY, OUR PRIORITY -->
+<section id="privacy">
+<div class="privacy-ambient"></div>
+<div class="container">
+<p class="section-label reveal">Discretion</p>
+<h2 class="section-title reveal" style="color:var(--white)">Your Privacy, Our Priority</h2>
+<div class="section-divider reveal" style="background:var(--gold)"></div>
+<div class="privacy-grid">
+<div class="privacy-content reveal">
+<ul class="privacy-list">
+<li>
+<svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
+Private treatment suites, not a waiting room full of familiar faces
+</li>
+<li>
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Discreet location in a professional medical building, alongside other practices
+</li>
+<li>
+<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+No signage that announces why you're here
+</li>
+<li>
+<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+HIPAA-compliant in every detail: records, communication, everything
+</li>
+<li>
+<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+We understand small-town life. Your business stays your business.
+</li>
+</ul>
+<p class="privacy-closing">Your journey is yours alone. We simply provide the space.</p>
+</div>
+<div class="privacy-image reveal reveal-delay-1">
+<!-- Replace with actual image: <img src="assets/treatment-suite.jpg" alt="Private treatment suite"> -->
+</div>
+</div>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- PULLQUOTE 2 -->
+<div class="pullquote-section pullquote-light reveal">
+<p class="pullquote">"You don't have to understand how it works. You just have to be willing to try."</p>
+</div>
+
+<!-- CONDITIONS -->
+<section id="conditions">
+<div class="container">
+<p class="section-label reveal">Conditions</p>
+<h2 class="section-title reveal">What We Treat</h2>
+<div class="section-divider reveal"></div>
+</div>
+<div class="conditions-grid">
+<div class="condition-card reveal">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Depression</h3>
+<p>Rapid relief when antidepressants have stopped working</p>
+</div>
+<div class="condition-card reveal reveal-delay-1">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Anxiety</h3>
+<p>Calm overactive fear responses at the neurological level</p>
+</div>
+<div class="condition-card reveal reveal-delay-2">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>PTSD</h3>
+<p>Process trauma without being overwhelmed by it</p>
+</div>
+<div class="condition-card reveal reveal-delay-3">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>OCD</h3>
+<p>Disrupt rigid thought patterns that medication can't reach</p>
+</div>
+<div class="condition-card reveal">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Chronic Pain</h3>
+<p>Reset pain signaling when traditional treatments fail</p>
+</div>
+<div class="condition-card reveal reveal-delay-1">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Bipolar Depression</h3>
+<p>Rapid mood stabilization for treatment-resistant episodes</p>
+</div>
+<div class="condition-card reveal reveal-delay-2">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Migraines</h3>
+<p>Reduce frequency and severity at the source</p>
+</div>
+<div class="condition-card reveal reveal-delay-3">
+<img src="assets/logos/gold-icon.png" alt="" class="cond-icon">
+<h3>Other Conditions</h3>
+<p>Expanding research, ask us if we can help</p>
+</div>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<div class="logo-bleed" style="margin-bottom:-20px"><img src="assets/logos/original-logo.png" alt="" style="height:200px;opacity:.55"></div>
+<p class="section-label reveal">Comprehensive Psychiatric Care</p>
+<h2 class="section-title reveal">Our Mental Health Services</h2>
+<div class="section-divider reveal"></div>
+<p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: rgba(19,43,76,0.7); font-size: 1.05rem; line-height: 1.8;">
+Claritiv Health provides complete mental health treatment under one roof. From traditional psychiatric care to innovative therapies, we create personalized treatment plans tailored to your unique needs.
+</p>
+<div class="services-grid">
+<div class="service-card reveal">
+<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><path d="M24 4C24 4 8 20 8 30c0 8.8 7.2 16 16 16s16-7.2 16-16C40 20 24 4 24 4z" fill="none" stroke="#C5A86B" stroke-width="2"/><path d="M24 18v16M18 26h12" stroke="#C5A86B" stroke-width="2"/></svg>
+<h3>Ketamine Infusion Therapy</h3>
+<p>Breakthrough IV treatment for depression, anxiety, PTSD &amp; chronic pain. Rapid relief when traditional treatments haven't worked.</p>
+<a href="ketamine-therapy.html">Learn More →</a>
+</div>
+<div class="service-card reveal reveal-delay-1">
+<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><path d="M24 4L24 44M12 24h24" stroke="#C5A86B" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="18" stroke="#C5A86B" stroke-width="2" fill="none"/></svg>
+<h3>Medication Management</h3>
+<p>Comprehensive psychiatric medication assessment and optimization. We review your current medications, identify what's working, and develop a personalized treatment plan.</p>
+<a href="coming-soon.html">Learn More →</a>
+</div>
+<div class="service-card reveal reveal-delay-2">
+<svg class="svc-icon" viewBox="0 0 48 48" fill="none"><path d="M16 20c0-4.4 3.6-8 8-8s8 3.6 8 8c0 4-2.8 7.3-6.5 8v4.5m0 4v.5" stroke="#C5A86B" stroke-width="2" stroke-linecap="round"/><path d="M20 34h8M22 38h4" stroke="#C5A86B" stroke-width="2" stroke-linecap="round"/></svg>
+<h3>Talk Therapy</h3>
+<p>Evidence-based psychotherapy including CBT, DBT, and trauma-focused therapy. Process experiences, develop coping strategies, and work through challenges in a supportive environment.</p>
+<a href="coming-soon.html">Learn More →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LOGO BLEED: Services → Journey -->
+<div class="logo-bleed" style="background:var(--cream)"><img src="assets/logos/original-logo.png" alt=""></div>
+
+<div class="gold-divider"></div>
+
+<!-- HOW IT WORKS / JOURNEY -->
+<section id="journey">
+<div class="container">
+<p class="section-label reveal">The Process</p>
+<h2 class="section-title reveal">Your Journey to Clarity</h2>
+<div class="section-divider reveal"></div>
+<div class="timeline">
+<div class="tl-step reveal">
+<div class="tl-num">1</div>
+<h4>Private Consultation</h4>
+<p>A confidential conversation about your history, your goals, and whether ketamine is right for you</p>
+</div>
+<div class="tl-step reveal reveal-delay-1">
+<div class="tl-num">2</div>
+<h4>Your First Session</h4>
+<p>Relax in a private suite during your 40 to 60 minute IV infusion, monitored, comfortable, unhurried</p>
+</div>
+<div class="tl-step reveal reveal-delay-2">
+<div class="tl-num">3</div>
+<h4>The Series</h4>
+<p>6 sessions over 2-3 weeks, each building on the last to rewire neural pathways</p>
+</div>
+<div class="tl-step reveal reveal-delay-3">
+<div class="tl-num">4</div>
+<h4>Ongoing Clarity</h4>
+<p>Monthly maintenance sessions to sustain and deepen your progress</p>
+</div>
+</div>
+<a href="coming-soon.html" class="btn-outline reveal">Am I a Candidate?</a>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- PULLQUOTE 3 -->
+<div class="pullquote-section pullquote-dark reveal">
+<p class="pullquote" style="color:var(--gold)">"Relief isn't a luxury. It's a right."</p>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+<div class="container">
+<p class="section-label reveal">Patient Experiences</p>
+<h2 class="section-title reveal">In Their Own Words</h2>
+<div class="section-divider reveal"></div>
+<div class="test-grid">
+<div class="test-card reveal">
+<div class="quote-mark">"</div>
+<blockquote>I spent fifteen years trying to outrun depression. Six different medications, three therapists, and more "just give it time" than I can count. By the time I found Claritiv, I wasn't hopeful. I was desperate. After my third treatment, I woke up and the fog was just gone. I made breakfast for my kids. I hadn't done that in months. That's when I knew something had actually changed.</blockquote>
+<cite>Sarah M., Educator</cite>
+</div>
+<div class="test-card reveal reveal-delay-1">
+<div class="quote-mark">"</div>
+<blockquote>I'm a veteran. I don't talk about what I carry. That's just not how I was built. But my wife could see it. She booked the consultation without telling me. I was skeptical, honestly bordering on hostile about the whole thing. By session two, she said she could see the difference in my eyes. By session four, I could feel it. For the first time in years, I slept through the night.</blockquote>
+<cite>James R., U.S. Army Veteran</cite>
+</div>
+<div class="test-card reveal reveal-delay-2">
+<div class="quote-mark">"</div>
+<blockquote>Anxiety stole my motherhood from me. My kids were right there, laughing, playing, needing me, and I couldn't reach them through the wall of dread. I tried everything my doctor suggested. Nothing worked long enough to matter. After my ketamine series, I caught myself on the floor playing trucks with my four-year-old, laughing. Actually laughing. I didn't even realize I'd stopped.</blockquote>
+<cite>Amanda K., Mother of Three</cite>
+</div>
+</div>
+<p class="test-privacy">* Names abbreviated for patient privacy. Testimonials shared with written permission.</p>
+</div>
+</section>
+
+<!-- LOGO BLEED: Testimonials → FAQ -->
+<div class="logo-bleed" style="background:var(--navy-dark)"><img src="assets/logos/white-logo-transparent.png" alt=""></div>
+
+<div class="gold-divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+<p class="section-label reveal">Common Questions</p>
+<h2 class="section-title reveal">Frequently Asked Questions</h2>
+<div class="section-divider reveal"></div>
+<div class="faq-list reveal">
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is ketamine therapy safe? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Absolutely. Ketamine has been FDA-approved as an anesthetic since 1970 and has an outstanding safety profile spanning over five decades of clinical use. It is on the World Health Organization's List of Essential Medicines and is used safely in hospitals worldwide every single day.</p>
+<p>At Claritiv Health, all infusions are administered by licensed providers in a fully monitored clinical setting. Your heart rate, blood pressure, and oxygen levels are tracked continuously throughout the entire session. Our team is trained in advanced cardiac life support, and we maintain emergency protocols that exceed standard safety guidelines.</p>
+<p>The sub-anesthetic doses used for mood disorders are significantly lower than those used in surgical settings, making the treatment gentle and well-tolerated by the vast majority of patients.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many sessions will I need? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>The typical protocol is 6 infusion sessions over 2-3 weeks for the initial series. This loading phase allows ketamine to build up its neuroplastic effects, essentially rewiring neural pathways that have been damaged by chronic depression, anxiety, or trauma. Each session builds upon the last.</p>
+<p>After completing the initial series, most patients transition to monthly maintenance infusions to sustain their improvement. Some patients find they can extend the time between maintenance sessions over time, while others prefer a consistent monthly schedule. We'll create a personalized plan based on your unique response to treatment.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What does a ketamine session feel like? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>When you arrive, you'll be welcomed into a private treatment suite designed for maximum comfort. Soft lighting, a weighted blanket, noise-canceling headphones with curated ambient music. Every detail is intentional. Your provider will place a small IV catheter, and the infusion begins slowly over 40 to 60 minutes.</p>
+<p>Most patients describe a deep sense of relaxation, lightness, and warmth within the first 10 to 15 minutes. You may experience mild dissociation, a gentle feeling of floating or detachment from your body, which many patients describe as pleasant, meditative, or even profoundly meaningful. Colors may seem more vivid, and you might experience a sense of perspective or emotional distance from your pain.</p>
+<p>Throughout the entire experience, you remain conscious and can communicate with your care team at any time. After the infusion, you'll rest in our recovery area for about 30 minutes while the effects gently subside. Most patients describe feeling a remarkable lightness, as if a weight has been quietly lifted from their shoulders.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What should I expect during my first visit? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Your first visit begins with a comprehensive consultation where we review your medical history, current medications, and treatment goals. This is a judgment-free conversation. We want to understand your journey and what you've been through. We'll explain the science behind ketamine therapy, walk you through exactly what will happen, and answer every question you have.</p>
+<p>If you're approved for treatment, your first infusion typically takes place the same week. Plan to arrive about 15 minutes early to settle in. We recommend wearing comfortable clothing, eating a light meal 2 to 3 hours beforehand, and arranging for someone to drive you home. The entire visit, from check-in through recovery, takes approximately 90 minutes to 2 hours.</p>
+<p>Many patients are nervous before their first session, and that's completely normal. Our team is exceptionally attentive to first-time patients. We'll check in with you frequently, adjust the dose if needed, and ensure you feel safe and supported throughout the entire experience.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are there any side effects? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Ketamine therapy is remarkably well-tolerated, but like any medical treatment, some patients experience mild, temporary side effects. The most common include light nausea, mild dizziness, and a temporary increase in blood pressure during the infusion. We proactively manage nausea with anti-nausea medication, and most patients report that these effects diminish significantly after the first session or two.</p>
+<p>During the infusion itself, you may experience perceptual changes: things like vivid colors, a sense of time distortion, or feeling as though you're gently floating. These are expected effects of the dissociative properties of ketamine and are actually associated with better treatment outcomes. They typically resolve within 15 to 30 minutes after the infusion ends.</p>
+<p>Some patients feel slightly tired or "spacey" for a few hours after treatment, which is why we require a designated driver. By the next morning, the vast majority of patients feel completely normal. Many report feeling significantly better than they have in months or even years.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is ketamine different from traditional antidepressants? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Traditional antidepressants like SSRIs and SNRIs work by adjusting serotonin and norepinephrine levels, a process that takes 4 to 8 weeks to produce noticeable effects, and only works for about 60 to 70% of patients. For the remaining 30 to 40%, these medications simply don't provide adequate relief, leading to years of trial and error with different drugs and dosages.</p>
+<p>Ketamine works through an entirely different mechanism. It targets the glutamate system, the brain's most abundant neurotransmitter, and rapidly promotes the growth of new synaptic connections through a process called neuroplasticity. Think of it as helping your brain rebuild pathways that depression, anxiety, or trauma have damaged. This is why many patients notice improvement within hours rather than weeks.</p>
+<p>Perhaps most importantly, ketamine has shown remarkable efficacy in patients who haven't responded to traditional treatments. Studies show response rates of 70% or higher in treatment-resistant populations, people who had lost hope after years of failed medications. It's not replacing your other treatments; it's offering a new pathway when the conventional ones have fallen short.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if I've tried everything else? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>If you're reading this question, we understand exactly where you are. You've tried the medications. Maybe five, ten, even fifteen different ones. You've done the therapy. You've tried exercise, meditation, supplements, and every suggestion well-meaning friends have offered. And you still feel stuck. You're not broken, and you haven't failed. The treatments failed you.</p>
+<p>Ketamine therapy was specifically studied and developed for people in exactly your situation. The term "treatment-resistant" doesn't mean untreatable. It means you haven't found the right treatment yet. Ketamine works through a completely different brain pathway than any medication you've tried before, which is why it can succeed where SSRIs, SNRIs, and other conventional approaches have not.</p>
+<p>Many of our most remarkable success stories come from patients who walked through our doors feeling hopeless. We've seen people who hadn't smiled in years rediscover joy. We've watched veterans finally sleep through the night. We've witnessed parents reconnect with their children after years of emotional numbness. Your story isn't over. It may just be waiting for the right chapter to begin.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does ketamine therapy cost? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>IV ketamine infusion sessions range from $350-500 per session. We offer discounted 6-session package pricing for the initial series, which provides significant savings. During your consultation, we'll provide a detailed cost breakdown tailored to your treatment plan.</p>
+<p>FSA/HSA accounts are accepted, and we offer flexible payment plans to make treatment accessible to those who need it. We also provide superbills that you can submit to your insurance for potential out-of-network reimbursement. Many patients find that when weighed against years of ineffective medications and lost productivity, ketamine therapy is one of the most cost-effective investments in their mental health.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I drive after a session? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>No. You will need a designated driver to take you home after your infusion. This is a firm safety requirement. The dissociative effects of ketamine, while therapeutic, temporarily affect coordination and reaction time. We recommend planning to rest for a few hours afterward. Most patients feel back to normal within 2 to 4 hours and can resume all normal activities the following day.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is ketamine therapy covered by insurance? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Ketamine infusion therapy is not typically covered by insurance at this time, as it is considered an off-label use for mood disorders. However, FSA and HSA accounts can be used for payment, and we provide detailed superbills that you can submit to your insurance for potential out-of-network reimbursement. Some patients have had success obtaining partial reimbursement.</p>
+<p>We believe financial barriers should never prevent someone from accessing life-changing treatment. That's why we offer flexible payment plans and transparent pricing with no hidden fees. During your consultation, we'll discuss all available options to make treatment accessible for your situation.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Who is a good candidate for ketamine therapy? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Adults suffering from treatment-resistant depression, anxiety, PTSD, OCD, bipolar depression, or chronic pain conditions who haven't responded adequately to traditional treatments are often excellent candidates. If you've tried two or more medications without sufficient relief, ketamine therapy may be the breakthrough you've been looking for.</p>
+<p>During your consultation, we'll conduct a thorough review of your medical history, current medications, and treatment goals to determine if ketamine is the right fit. Certain conditions such as uncontrolled hypertension, active substance abuse, or certain psychotic disorders may require additional evaluation. Our goal is always your safety first, results second.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly will I see results? <span class="faq-icon">+</span></button>
+<div class="faq-a">
+<p>Many patients notice significant improvement within 24 hours of their first infusion, a dramatic difference from traditional antidepressants that can take 4 to 8 weeks. Some patients feel a shift during the infusion itself: a softening of the heaviness, a glimmer of lightness they haven't felt in years. This rapid onset is one of ketamine's most remarkable properties.</p>
+<p>Results typically strengthen and deepen over the course of the 6-session series as your brain builds new neural connections. By the end of the initial protocol, most patients report substantial, sustained improvement in mood, energy, motivation, and overall quality of life. Maintenance sessions help preserve these gains long-term.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- SOCIAL -->
+<section id="social">
+<h3>Follow Our Journey</h3>
+<div class="social-row">
+<a href="https://instagram.com/claritivhealth" target="_blank" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg><span>Instagram</span></a>
+<a href="https://facebook.com/claritivhealth" target="_blank" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><span>Facebook</span></a>
+<a href="https://tiktok.com/@claritivhealth" target="_blank" class="social-link" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><span>TikTok</span></a>
+<a href="https://x.com/claritivhealth" target="_blank" class="social-link" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X / Twitter</span></a>
+<a href="https://linkedin.com/company/claritivhealth" target="_blank" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
+<a href="https://youtube.com/@claritivhealth" target="_blank" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></a>
+</div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title reveal">Visit Claritiv Health</h2>
+<div class="section-divider reveal"></div>
+<div class="contact-grid">
+<div class="contact-form-wrapper reveal">
+<h4 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--navy);margin-bottom:20px">Send Us a Message</h4>
+<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display:flex;flex-direction:column;gap:16px">
+<input type="text" name="name" placeholder="Your Name" required style="padding:14px 18px;border:1.5px solid rgba(19,43,76,.15);border-radius:6px;font-size:.95rem;font-family:var(--font-body);transition:border .3s">
+<input type="email" name="email" placeholder="Email Address" required style="padding:14px 18px;border:1.5px solid rgba(19,43,76,.15);border-radius:6px;font-size:.95rem;font-family:var(--font-body);transition:border .3s">
+<input type="tel" name="phone" placeholder="Phone Number (Optional)" style="padding:14px 18px;border:1.5px solid rgba(19,43,76,.15);border-radius:6px;font-size:.95rem;font-family:var(--font-body);transition:border .3s">
+<textarea name="message" placeholder="Your Message" rows="5" required style="padding:14px 18px;border:1.5px solid rgba(19,43,76,.15);border-radius:6px;font-size:.95rem;font-family:var(--font-body);resize:vertical;transition:border .3s"></textarea>
+
+<label style="display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:rgba(19,43,76,.75);line-height:1.5;cursor:pointer">
+<input type="checkbox" name="smsConsent" value="yes" style="margin-top:4px;width:18px;height:18px;cursor:pointer">
+<span>By checking this box, you agree to receive SMS messages from Claritiv Health related to appointment reminders and follow-up messages. You may reply STOP to opt out at any time. Reply HELP to (731) 256-5333 for assistance. Messages and data rates may apply. Message frequency will vary. Learn more on our <a href="/privacy.html" style="color:var(--gold);text-decoration:underline">privacy policy page</a> and <a href="/terms.html" style="color:var(--gold);text-decoration:underline">Terms & Conditions</a>.</span>
+</label>
+
+<p style="font-size:.8rem;color:rgba(19,43,76,.6);margin-top:8px">
+By clicking 'Submit' you agree to our <a href="/terms.html" style="color:var(--gold);text-decoration:underline">Terms and Conditions</a> and <a href="/privacy.html" style="color:var(--gold);text-decoration:underline">Privacy Policy</a>.
+</p>
+
+<button type="submit" style="padding:16px 32px;background:var(--gold);color:var(--white);border:none;border-radius:6px;font-size:1rem;font-weight:600;letter-spacing:.03em;cursor:pointer;transition:all .3s;margin-top:8px">Submit</button>
+</form>
+</div>
+
+<div class="contact-info reveal reveal-delay-1">
+<h4 style="font-family:var(--font-heading);font-size:1.3rem;color:var(--navy);margin-bottom:20px">Visit Us</h4>
+<p><strong>Address:</strong><br>468 N. Parkway, Windsor Commons<br>Jackson, TN 38305</p>
+<p><strong>Email:</strong><br><a href="mailto:info@claritivhealth.com" style="color:var(--gold)">info@claritivhealth.com</a></p>
+<p><strong>Phone:</strong><br><a href="tel:+17312565333" style="color:var(--gold)">(731) 256-5333</a></p>
+<p><strong>Hours:</strong><br>Monday – Friday: 9:00 AM – 5:00 PM<br>Saturday: By Appointment</p>
+<p style="margin-top:20px;font-style:italic;color:rgba(19,43,76,.5);font-size:.85rem">Located alongside Vanderbilt Children's and Pathway Healthcare</p>
+
+<div style="margin-top:30px;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.1)">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.5!2d-88.82!3d35.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQwJzEyLjAiTiA4OMKwNDknMTIuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+<div class="container">
+<h2 class="reveal">Ready to Find Clarity?</h2>
+<p class="reveal reveal-delay-1">Take the first step. A private, no-obligation conversation about whether ketamine therapy is right for you.</p>
+<a href="coming-soon.html" class="btn-navy reveal reveal-delay-2">Schedule a Private Consultation</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+<div class="footer-gold-line"></div>
+<div class="container footer-inner">
+<div class="footer-top">
+<div class="footer-logo-left"><img src="assets/logos/white-logo-transparent.png" alt="Claritiv Health"></div>
+<div class="footer-center">
+<div>
+<h5>Quick Links</h5>
+<a href="#conditions">What We Treat</a>
+<a href="#services">Services</a>
+<a href="#journey">How It Works</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+</div>
+<div>
+<h5>Services</h5>
+<a href="#">Ketamine Therapy</a>
+<a href="#">NAD+ Therapy</a>
+<a href="#">IV Drips</a>
+<a href="#">IM Injections</a>
+</div>
+<div>
+<h5>Contact</h5>
+<div class="footer-address">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+<p>468 N. Parkway, Windsor Commons<br>Jackson, TN 38305</p>
+</div>
+<p style="margin-top:8px"><a href="mailto:info@claritivhealth.com">info@claritivhealth.com</a></p>
+<p><a href="tel:+17312565333">(731) 256-5333</a></p>
+</div>
+</div>
+<div class="footer-logo-right"><img src="assets/logos/gold-icon-transparent.png" alt="Claritiv Icon"></div>
+</div>
+<div class="footer-cta-row">
+<a href="coming-soon.html" class="btn-gold">Schedule a Consultation</a>
+</div>
+<div class="footer-social">
+<a href="https://instagram.com/claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+<a href="https://facebook.com/claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://tiktok.com/@claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+<a href="https://x.com/claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="https://linkedin.com/company/claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="https://youtube.com/@claritivhealth" target="_blank"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+</div>
+<div class="footer-bar">
+<span>© 2026 Claritiv Health LLC. All rights reserved. | <a href="/terms.html" style="color:rgba(255,255,255,.6);text-decoration:underline">Terms & Conditions</a> | <a href="/privacy.html" style="color:rgba(255,255,255,.6);text-decoration:underline">Privacy Policy</a> | <a href="/hipaa-notice.html" style="color:rgba(255,255,255,.6);text-decoration:underline">HIPAA Notice</a></span>
+<em>Clear Mind. New Beginning.</em>
+</div>
+</div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-btn" onclick="document.getElementById('chatPopup').classList.toggle('open')" aria-label="Chat with us">
+<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+<div class="chat-popup" id="chatPopup">
+<span class="chat-close" onclick="document.getElementById('chatPopup').classList.remove('open')">✕</span>
+<p>Welcome to Claritiv Health. We're here whenever you're ready to take the first step.</p>
+<div class="chat-actions">
+<a href="#contact" class="chat-action-btn" onclick="document.getElementById('chatPopup').classList.remove('open')">
+<svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg>
+Schedule a Consultation
+</a>
+<a href="#faq" class="chat-action-btn" onclick="document.getElementById('chatPopup').classList.remove('open')">
+<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+Learn About Ketamine
+</a>
+<a href="https://maps.google.com/?q=468+N+Parkway+Windsor+Commons+Jackson+TN+38305" target="_blank" class="chat-action-btn">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+Get Directions
+</a>
+</div>
+</div>
+
+<script>
+// SPLASH SCREEN
+(function(){
+if(sessionStorage.getItem('claritiv_splash')){
+document.getElementById('splash').style.display='none';
+}else{
+setTimeout(()=>{
+document.getElementById('splash').classList.add('hide');
+sessionStorage.setItem('claritiv_splash','1');
+setTimeout(()=>document.getElementById('splash').style.display='none',800);
+},2500);
+}
+})();
+
+// NAV SCROLL
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+nav.classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// PARALLAX HERO
+const heroBg=document.getElementById('heroBg');
+window.addEventListener('scroll',()=>{
+const y=window.scrollY;
+if(y<window.innerHeight*1.5){
+heroBg.style.transform='translate3d(0,'+y*.35+'px,0)';
+}
+},{passive:true});
+
+// HERO PARTICLES
+(function(){
+const canvas=document.getElementById('hero-particles');
+const ctx=canvas.getContext('2d');
+let w,h,particles=[];
+function resize(){w=canvas.width=canvas.offsetWidth;h=canvas.height=canvas.offsetHeight}
+resize();window.addEventListener('resize',resize);
+for(let i=0;i<50;i++){
+particles.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2+.5,dx:(Math.random()-.5)*.3,dy:(Math.random()-.5)-.15,o:Math.random()*.5+.2});
+}
+function draw(){
+ctx.clearRect(0,0,w,h);
+particles.forEach(p=>{
+ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle='rgba(197,168,107,'+p.o+')';ctx.fill();
+p.x+=p.dx;p.y+=p.dy;
+if(p.x<0)p.x=w;if(p.x>w)p.x=0;
+if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+});
+requestAnimationFrame(draw);
+}
+draw();
+})();
+
+// MOBILE MENU
+function closeMobile(){
+document.querySelector('.hamburger').classList.remove('open');
+document.getElementById('mobileMenu').classList.remove('open');
+}
+window.closeMobile=closeMobile;
+
+// REVEAL ON SCROLL
+const io=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// STAT COUNTERS & RINGS
+const statObs=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(!e.isIntersecting)return;
+const pct=parseInt(e.target.dataset.pct)||0;
+const fg=e.target.querySelector('.fg');
+if(fg){const circ=2*Math.PI*60;fg.style.strokeDashoffset=circ-(circ*pct/100);}
+// pulse class
+setTimeout(()=>e.target.classList.add('animated'),1600);
+const counter=e.target.querySelector('.counter');
+if(counter){
+const target=parseInt(counter.dataset.target);
+let cur=0;const step=Math.ceil(target/40);
+const iv=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(iv)}counter.textContent=cur},30);
+}
+statObs.unobserve(e.target);
+});
+},{threshold:.4});
+document.querySelectorAll('.stat-ring').forEach(el=>statObs.observe(el));
+
+// NUMBER COUNTER FOR ANY .count-up elements
+const countObs=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(!e.isIntersecting)return;
+const el=e.target;
+const target=parseInt(el.dataset.target);
+let cur=0;const step=Math.ceil(target/40);
+const iv=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(iv)}el.textContent=cur},30);
+countObs.unobserve(el);
+});
+},{threshold:.5});
+document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
+</script>
+</body>
+</html>
